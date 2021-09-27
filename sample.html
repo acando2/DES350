@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<style>
+
+/*	BODY STYLE*/
+	body {
+		width: 100%;
+		margin:0;
+    	padding:0;
+		overflow: visible;
+	}
+	
+	/* OVERALL CENTERING BASED ON WIDTH OF MY CALCULATOR*/
+	#myCalculator{
+	}
+	
+  #wrapper{
+    width: 300px;
+  }
+	 
+	#display{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+  		z-index: 1;
+		width: 500px;
+		margin-top: 135px;
+		margin-left: 85px;
+		background-color: #c19bbb;
+		text-align: right;
+		font-family: 'Courier New Bold', 'Courier New', sans-serif;
+		font-size: 70px;
+		font-weight: bold;
+		border: none;
+		border-radius: 10px;
+		
+	}
+	
+	
+/*	START OF CLASSES*/
+
+	#background{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+  		z-index: -1;
+	}
+	
+	.calc-body{
+		position: absolute;
+		margin-top: 130px;
+		margin-left: 55.8%;
+	}
+	
+	.screen{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+		z-index: 1;
+		margin-top: 50px;
+		margin-left: 50px;
+  		
+	}
+	
+	.keyboard{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+  		z-index: 1;
+		width: 579px;
+    	margin-top: 350px;
+		margin-left: 50px;
+		
+	}
+	
+	
+	
+	.num{
+		display: inline-block;
+		position: relative;
+	}
+	
+	.op{
+		width: 100%;
+		display: inline-block;
+		position: relative;
+	}
+	
+	.op_big{
+		position: fixed;
+		padding-top: 397%;
+		display: inline-block;
+	}
+	
+	.one{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.two{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.three{
+		display:inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.four{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.five{
+		display: inline-block;
+	}
+	
+	.six{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.seven{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.eight{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.nine{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.zero{
+		display: inline-block;
+		
+	}
+	
+	.decimal{
+		display:inline-block;
+		margin-right: 5%;
+	}
+	
+	.add{
+		display: inline-block;
+		margin-right: 5%;
+	}
+	
+	.subtract{
+		display: inline-block;
+		margin-right: 5%;
+	}
+	
+	.multiply{
+		display: inline-block;
+		margin-right: 5%;
+	}
+	
+	.divide{
+		display: inline-block;
+
+	}
+	
+	.clear{
+		display: inline-block;
+	}
+	
+	
+	
+	.equals{
+		display: inline-block;
+		margin-left: 80%;
+	
+	}
+		
+</style>
+
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<div id="mainfolder">
+<form name="calculator">
+
+<div id="myCalculator">
+	
+<img id="background" src="../Pictures/background-final.jpg" alt=""/>
+	
+<div class="calc-body"> <img src="../Pictures/calc-body.png" width="730" height="803" alt=""/>
+
+<div class="inputRow">
+	<div id="top_display">
+		<input type="text" name="display" id="display" disabled>
+	</div>
+	<div class="screen"> <img src="screen.png" width="575" height="261" alt=""/> </div>
+</div>
+
+<div class="keyboard">
+<div class="inputRow1">
+	<div class="one">
+		<img src="1.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="two">
+		<img src="2.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="three">
+		<img src="3.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="four">
+		<img src="4.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="five">
+		<img src="5.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+</div>
+
+<div class="inputRow2">
+	<div class="six">
+		<img src="6.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="seven">
+		<img src="7.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="eight">
+		<img src="8.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="nine">
+		<img src="9.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+	<div class="zero">
+		<img src="0.png" class="num" onclick="calculator.display.value +='1'" alt="one"/>
+	</div>
+</div>
+
+<div class="inputRow3">
+	<div class="decimal">
+		<img src="decimal.png" class="op" name="decimal" value="." onclick="calculator.display.value+='.'" alt="decimal"/>
+	</div>
+	<div class="add">
+		<img src="plus.png" class="op" name="add" value="+" onclick="calculator.display.value+='+'" alt="add"/>
+	</div>
+	<div class="subtract">
+		<img src="minus.png" class="op" name="subtract" value="-" onclick="calculator.display.value+='-'" alt="minus"/>
+	</div>
+	<div class="multiply">
+		<img src="multiply.png" class="op" name="multiply" value="+" onclick="calculator.display.value+='*'" alt="multiply"/>
+	</div>
+	<div class="divide">
+		<img src="divide.png" class="op" name="divide" value="/" onclick="calculator.display.value+='/'" alt="divide"/>
+	</div>
+</div>
+</div>
+  </div>
+</div>
+
+	
+
+
+</form>
+</div>
+</body>
+</html>
