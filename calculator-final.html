@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<style>
+
+/*	BODY STYLE*/
+	body {
+		width: 100%;
+		margin:0;
+    	padding:0;
+		overflow: visible;
+	}
+	
+	/* OVERALL CENTERING BASED ON WIDTH OF MY CALCULATOR*/
+	#myCalculator{
+	}
+	
+  #wrapper{
+    width: 300px;
+  }
+	 
+	#display{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+  		z-index: 1;
+		width: 500px;
+		margin-top: 145px;
+		margin-left: 85px;
+		background-color: #c19bbb;
+		text-align: center;
+		font-family: 'vt323';
+		font-size: 100px;
+		border: none;
+		border-radius: 10px;
+		
+	}
+	
+	
+/*	START OF CLASSES*/
+
+	#background{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+  		z-index: -1;
+	}
+	
+	.calc-body{
+		position: absolute;
+		margin-top: 130px;
+		margin-left: 49%;
+		width: 100vw;
+	}
+	
+	.reflection{
+		position: absolute;
+		z-index: 3;
+		margin-top: 66px;
+		margin-left: 85px;
+		opacity: 40%;
+	}
+	
+	.screen{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+		z-index: 0;
+		margin-top: 65px;
+		margin-left: 50px;
+	}
+	
+	.keyboard{
+		position: absolute;
+ 		left: 0px;
+ 		top: 0px;
+  		z-index: 1;
+		width: 579px;
+    	margin-top: 360px;
+		margin-left: 50px;
+	}
+	
+	
+	
+	.num{
+		display: inline-block;
+		position: relative;
+	}
+	
+	.op{
+		width: 100%;
+		display: inline-block;
+		position: relative;
+	}
+	
+	.op_big{
+		position: fixed;
+		padding-top: 397%;
+		display: inline-block;
+	}
+	
+	.one{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.two{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.three{
+		display:inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.four{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.five{
+		display: inline-block;
+	}
+	
+	.six{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.seven{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.eight{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.nine{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.zero{
+		display: inline-block;
+		
+	}
+	
+	.decimal{
+		display:inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.add{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.subtract{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.multiply{
+		display: inline-block;
+		margin-right: 5%;
+		margin-bottom: 3%;
+	}
+	
+	.divide{
+		display: inline-block;
+		margin-bottom: 3%;
+
+	}
+	
+	.clear{
+		display: inline-block;
+		margin-right: 6.5%;
+	}
+	
+	
+	
+	.equals{
+		display: inline-block;	
+	}
+
+
+		
+</style>
+
+<title>Untitled Document</title>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('1-pushed.png','2-pushed.png','3-pushed.png','4-pushed.png','5-pushed.png','6-pushed.png','7-pushed.png','8-pushed.png','9-pushed.png','0-pushed.png','decimal-pushed.png','plus-pushed.png','subtract-pushed.png','multiply-pushed.png','divide-pushed.png','clear-pushed.png','equals-pushed.png')">
+
+<div id="mainfolder">
+<form name="calculator">
+
+<div id="myCalculator">
+	
+<img id="background" src="bg.jpg" width="1920" height="1080" alt=""/>
+
+<div class="calc-body">
+
+<div class="reflection">
+	<img src="reflection.png" width="353" height="260" alt=""/> 
+</div>
+
+<img src="calc-body.png" width="743" height="806" alt=""/>
+
+
+<div class="inputRow">
+	<div id="top_display">
+		<input type="text" name="display" id="display" disabled>
+	</div>
+	
+<div class="screen"> <img src="screen.png" width="575" height="261" alt=""/> </div>
+</div>
+
+<div class="keyboard">
+<div class="inputRow1">
+	<div class="one">
+		<a href="javascript:;" onClick="MM_swapImage('Image1','','1-pushed.png',1)"><img src="1.png" alt="one" class="num" id="Image1" onclick="calculator.display.value +='1'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="two">
+		<a href="javascript:;" onClick="MM_swapImage('Image2','','2-pushed.png',1)"><img src="2.png" alt="two" class="num" id="Image2" onclick="calculator.display.value +='2'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="three">
+		<a href="javascript:;" onClick="MM_swapImage('Image3','','3-pushed.png',1)"><img src="3.png" alt="three" class="num" id="Image3" onclick="calculator.display.value +='3'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="four">
+		<a href="javascript:;" onClick="MM_swapImage('Image4','','4-pushed.png',1)"><img src="4.png" alt="four" class="num" id="Image4" onclick="calculator.display.value +='4'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="five">
+		<a href="javascript:;" onClick="MM_swapImage('Image5','','5-pushed.png',1)"><img src="5.png" alt="five" class="num" id="Image5" onclick="calculator.display.value +='5'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+</div>
+
+<div class="inputRow2">
+	<div class="six">
+		<a href="javascript:;" onClick="MM_swapImage('Image6','','6-pushed.png',1)"><img src="6.png" alt="six" class="num" id="Image6" onclick="calculator.display.value +='6'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="seven">
+		<a href="javascript:;" onClick="MM_swapImage('Image7','','7-pushed.png',1)"><img src="7.png" alt="seven" class="num" id="Image7" onclick="calculator.display.value +='7'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="eight">
+		<a href="javascript:;" onClick="MM_swapImage('Image8','','8-pushed.png',1)"><img src="8.png" alt="eight" class="num" id="Image8" onclick="calculator.display.value +='8'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="nine">
+		<a href="javascript:;" onClick="MM_swapImage('Image9','','9-pushed.png',1)"><img src="9.png" alt="nine" class="num" id="Image9" onclick="calculator.display.value +='9'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+	<div class="zero">
+		<a href="javascript:;" onClick="MM_swapImage('Image10','','0-pushed.png',1)"><img src="0.png" alt="zero" class="num" id="Image10" onclick="calculator.display.value +='0'" onMouseMove="MM_swapImgRestore()" border="0"/></a>
+	</div>
+</div>
+
+<div class="inputRow3">
+	<div class="decimal">
+		<a href="javascript:;" onClick="MM_swapImage('decimal','','decimal-pushed.png',1)"><img src="decimal.png" alt="decimal" name="decimal" class="op" onclick="calculator.display.value+='.'" onMouseMove="MM_swapImgRestore()" value="." border="0"/></a>
+	</div>
+	<div class="add">
+		<a href="javascript:;" onClick="MM_swapImage('add','','plus-pushed.png',1)"><img src="plus.png" alt="add" name="add" class="op" onclick="calculator.display.value+='+'" onMouseMove="MM_swapImgRestore()" value="+" border="0"/></a>
+	</div>
+	<div class="subtract">
+		<a href="javascript:;" onClick="MM_swapImage('subtract','','subtract-pushed.png',1)"><img src="minus.png" alt="minus" name="subtract" class="op" onclick="calculator.display.value+='-'" onMouseMove="MM_swapImgRestore()" value="-" border="0"/></a>
+	</div>
+	<div class="multiply">
+		<a href="javascript:;" onClick="MM_swapImage('multiply','','multiply-pushed.png',1)"><img src="multiply.png" alt="multiply" name="multiply" class="op" onclick="calculator.display.value+='*'" onMouseMove="MM_swapImgRestore()" value="+" border="0"/></a>
+	</div>
+	<div class="divide">
+		<a href="javascript:;" onClick="MM_swapImage('divide','','divide-pushed.png',1)"><img src="divide.png" alt="divide" name="divide" class="op" onclick="calculator.display.value+='/'" onMouseMove="MM_swapImgRestore()" value="/" border="0"/></a>
+	</div>
+</div>
+
+<div class="inputRow4">
+<div class="clear">
+		<a href="javascript:;" onClick="MM_swapImage('clear','','clear-pushed.png',1)"><img src="cleara.png" alt="clear" name="clear" class="op" onclick="calculator.display.value=''" onMouseMove="MM_swapImgRestore()" value="C" border="0"/></a>
+</div>
+<div class="equals">
+		<a href="javascript:;" onClick="MM_swapImage('equals','','equals-pushed.png',1)"><img src="equals.png" alt="equals" name="equals" class="op" onclick="calculator.display.value=eval(calculator.display.value)" onMouseMove="MM_swapImgRestore()" value="=" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+	
+
+
+</form>
+</div>
+</body>
+</html>
