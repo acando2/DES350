@@ -7,38 +7,146 @@
 <style>
 
 body{
+	margin-top: 150px;
+	margin-left: calc(50% - 310px);
+	overflow: hidden;
 	background-color: #C9E1FF;
-	margin-left: 20%;
-	margin-top: 120px;
 	transform: scale(80%);
-	position: absolute;
 }
 
+
+
+
+
+.hi{
+	position: absolute;
+	left: 10px;
+}
+
+
+
+.vert1{
+	height: 80px;
+	width: 20px;
+	background-color: #2E2416;
+	border-radius: 100px;
+	position: absolute;
+	left: 560px;
+	top: 47px;
+	z-index: 10;
+}
+
+
+
+.vert2{
+	height: 80px;
+	width: 20px;
+	background-color: #2E2416;
+	border-radius: 100px;
+	position: absolute;
+	left: 605px;
+	top: 47px;
+	z-index: 10;
+}
+
+
+
+.horiz1{
+	height: 20px;
+	width: 50px;
+	background-color: #2E2416;
+	border-radius: 100px;
+	position: absolute;
+	left: 570px;
+	top: 77px;
+	z-index: 10;
+}
+
+
+
+.i-vert{
+	height: 60px;
+	width: 20px;
+	background-color: #2E2416;
+	border-radius: 100px;
+	position: absolute;
+	left: 640px;
+	top: 67px;
+	z-index: 10;
+}
+
+
+
+.i-dot{
+	height: 20px;
+	width: 20px;
+	background-color: #2E2416;
+	border-radius: 50%;
+	position: absolute;
+	left: 640px;
+	top: 40px;
+	z-index: 10;
+}
+
+
+
+.excl-vert{
+	height: 60px;
+	width: 20px;
+	background-color: #2E2416;
+	border-radius: 100px;
+	position: absolute;
+	left: 680px;
+	top: 43px;
+	z-index: 10;
+}
+
+
+
+.excl-dot{
+	height: 20px;
+	width: 20px;
+	background-color: #2E2416;
+	border-radius: 50%;
+	position: absolute;
+	left: 680px;
+	top: 111px;
+	z-index: 10;
+}
+
+
+
+.bubble {
+	  position: absolute;
+	  font-family: sans-serif;
+	  font-size: 18px;
+	  line-height: 24px;
+	  width: 150px;
+	  height: 110px;
+	  background: #fff;
+	  border-radius: 50px;
+	  padding: 30px 40px 40px 80px;
+	  left: 500px;
+	  text-align: center;
+	  color: #000;
+	  z-index: 2;
+}
+
+
+
+.triangle{
+	left: 540px;
+	top: 170px;
+	position: absolute;
+	border-width: 50px 50px 0 0;
+	border-color: white transparent transparent transparent;
+	border-style: solid;
+}
 
 
 .spark{
-	animation-name: spark01;
-	animation-duration: 1s;
-	animation-delay: 0s;
-	animation-iteration-count: 1;
+	position: absolute;
 }
-
-	@-webkit-keyframes spark01{
-		0%{
-			opacity: 100%;
-		}
-		
-		
-		50%{
-			opacity: 0%;
-		}
-		
-		
-		100%{
-			opacity: 0%;
-			background-color: #C9E1FF;
-		}
-	}
 
 .spark-1{
 	height: 76.6235px;
@@ -51,6 +159,7 @@ body{
 	z-index: 1;
 	position: absolute;
 }
+
 
 
 .spark-2{
@@ -66,6 +175,7 @@ body{
 }
 
 
+
 .spark-3{
 	height: 76.6235px;
 	width: 22.4873px;
@@ -78,20 +188,6 @@ body{
 	position: absolute;
 }
 
-
-.smile{
-  width: 112.8833px;
-  height: 25.4069px;
-  border: solid 17px #fff;
-  border-color: #2E2416 transparent transparent transparent;
-  border-radius: 50%/100% 100% 0 0;
-  transform: rotate(190deg);
-  margin-left: 135px;
-  margin-top: 400px;
-  z-index: 7;
-  position: absolute;
-  
-}
 
 
 .bangs_L{
@@ -106,6 +202,7 @@ body{
 }
 	
 	
+	
 .bangs_R{
 	height: 295.1744px;
 	width: 118.132px;
@@ -116,6 +213,7 @@ body{
 	z-index: 1;
 	position: absolute;
 }
+
 
 
 .sidebang_L{
@@ -129,11 +227,13 @@ body{
 	position: absolute;
 }
 
+
+
 .sidebang_R{
 	height: 285.2008px;
 	width:122.3926px;
 	box-shadow: 40px 10px 0px 5px #2E2416;
-	margin-left: 45px;
+	margin-left: 47px;
 	margin-top: 190px;
 	border-radius: 50%;
 	transform: rotate(170deg);
@@ -143,19 +243,10 @@ body{
 
 
 
-.left-eye{
-	margin-left: 11px;
-	margin-top: 3px;
-	position: absolute;
+
+
 	
-}
-
-
-.right-eye{
-	margin-left: -5px;
-}
-
-
+		
 .eyebrow_L{
 	height: 14.4813px;
 	width: 81.3544px;
@@ -180,6 +271,37 @@ body{
 	transform: rotate(6.907deg);
 	z-index: 6;
 	position: absolute;
+}
+
+
+
+.left-eye{
+	margin-left: 11px;
+	margin-top: 3px;
+	
+	animation-name: blinks;
+	animation-duration: 6s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: left;
+	position: absolute;
+	z-index: 9;
+}
+
+
+
+.right-eye{
+	margin-left: -5px;
+	
+	animation-name: blinks;
+	animation-duration: 6s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: top;
+	position: absolute;
+	z-index: 9;
 }
 
 
@@ -215,8 +337,8 @@ body{
 	width: 21.1027px;
 	background-color: #2E2416;
 	transform: rotate(80deg);
-	margin-left: 70px;
-	margin-top: 252px;
+	margin-left: 78px;
+	margin-top: 255px;
 	border-radius: 50%;
 	z-index: 4;
 	position: absolute;
@@ -229,8 +351,8 @@ body{
 	width: 21.1027px;
 	background-color: #2E2416;
 	transform: rotate(88deg);
-	margin-left: 328px;
-	margin-top: 238px;
+	margin-left: 325px;
+	margin-top: 237px;
 	border-radius: 50%;
 	z-index: 4;
 	position: absolute;
@@ -305,143 +427,8 @@ body{
 }
 
 
-.mouth-open{
-	animation-name: smile02;
-	animation-duration: 2s;
-	animation-delay: 0s;
-	animation-iteration-count: infinite;
-}
-
-	@-webkit-keyframes smile02{
-		0%{
-			height: 50%;
-		}
-		
-		
-		50%{
-			height: 50%;
-		}
-		
-		
-		100%{
-		}
-	}
 
 
-
-.tongue{
-	margin-top: 2.5px;
-	position: absolute;
-}
-
-
-.tongue-1{
-	height: 17.1498px;
-	width: 52.2398px;
-	background-color: #941365;
-	margin-left: 169px;
-	margin-top: 442px;
-	border-radius: 50%;
-	transform: rotate(-8deg);
-	z-index: 6;
-	position: absolute;
-}
-
-
-
-.tongue-2{
-	height: 23.4072px;
-	width: 60.1673px;
-	background-color: #941365;
-	margin-left: 198px;
-	margin-top: 444px;
-	border-radius: 50%;
-	transform: rotate(-163.48deg);
-	z-index: 6;
-	position: absolute;
-}
-
-
-
-.tongue-3{
-	height: 21.2165px;
-	width: 59.4579px;
-	background-color: #941365;
-	margin-left: 186px;
-	margin-top: 456px;
-	border-radius: 50%;
-	transform: rotate(-177deg);
-	z-index: 6;
-	position: absolute;
-}
-
-
-.tongue-4{
-	height: 12.3663px;
-	width: 45.4993px;
-	background-color: #941365;
-	margin-left: 167px;
-	margin-top: 458px;
-	border-radius: 50%;
-	transform: rotate(-333deg);
-	z-index: 6;
-	position: absolute;
-}
-
-
-
-.tongue-5{
-	height: 14.1624px;
-	width: 48.5523px;
-	background-color: #941365;
-	margin-left: 208px;
-	margin-top: 462px;
-	border-radius: 50%;
-	transform: rotate(-193deg);
-	z-index: 6;
-	position: absolute;
-}
-
-
-.mouth-1{
-	height: 71.9137px;
-	width: 120.6882px;
-	background-color: #C46794;
-	margin-left: 155px;
-	margin-top: 400px;
-	border-radius: 50%;
-	transform: rotate(-353.093deg);
-	z-index: 5;
-	position: absolute;
-}
-
-
-
-.mouth-2{
-	height: 46.7826px;
-	width: 82.3864px;
-	background-color: #C46794;
-	margin-left: 196px;
-	margin-top: 430px;
-	border-radius: 50%;
-	transform: rotate(-205.53deg);
-	z-index: 5;
-	position: absolute;
-}
-
-
-
-.mouth-3{
-	height: 49.6052px;
-	width: 87.0503px;
-	background-color: #C46794;
-	margin-left: 154px;
-	margin-top: 425px;
-	border-radius: 50%;
-	transform: rotate(-330deg);
-	z-index: 5;
-	position: absolute;
-}
 
 
 
@@ -498,6 +485,7 @@ body{
 }
 
 
+
 .hair_2{
 	height: 713.4463px;
 	width: 227.2888px;
@@ -509,6 +497,7 @@ body{
 	z-index: -1;
 	position: absolute;
 }
+
 
 
 .hair_3{
@@ -524,6 +513,7 @@ body{
 }
 
 
+
 .hair_4{
 	height: 713.4463px;
 	width: 227.2888px;
@@ -535,6 +525,7 @@ body{
 	z-index: -1;
 	position: absolute;
 }
+
 
 
 .back_L{
@@ -550,6 +541,7 @@ body{
 }
 
 
+
 .back_R{
 	height: 337.3238px;
 	width: 219.9461px;
@@ -563,8 +555,218 @@ body{
 }
 
 
+.spark{
+	top: 20px;
+	position: absolute;
+	
+	animation-name: spark01;
+	animation-duration: 5s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+
+@-webkit-keyframes spark01{
+		0%{
+			opacity: 0%;
+		}
+		
+		23%{
+			opacity: 0%;
+		}
+		
+		25%{
+			opacity: 100%;
+		}
+	
+		
+		28%{
+			opacity: 100%;
+		}
+		
+		
+		29%{
+			opacity: 0%;
+		}
+		
+		
+		100%{
+			opacity: 0%;
+		}
+	}
+	
+	
+
+.eyebrows{
+	animation-name: browraise;
+	animation-duration: 5s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	position: absolute;
+}
+
+	
+@-webkit-keyframes browraise{
+		0%{
+			top: 0px;
+		}
+		
+		23%{
+			top: 0px;
+		}
+		
+		25%{
+			top: -10px;
+		}
+		
+		40%{
+			top: -10px;
+		}
+		
+		42%{
+			top: 0px;
+		}
+		
+		44%{
+			top: 0px;
+		}
+		
+		45%{
+			top: -20px;
+		}
+		
+		70%{
+			top: -20px;
+		}
+		
+		73%{
+			top: 0px;
+		}
+}
+
+
+
+.mouth{
+	height: 60.411px;
+	width: 60.411px;
+	background-color: #C46794;
+	left: 185px;
+	top: 410px;
+	box-shadow: inset 0 40px 0 0 #941365;
+
+	border-radius: 50%;
+	z-index: 5;
+	transform-origin: center;
+	position: absolute;
+	
+	animation-name: smile;
+	animation-duration: 5s;
+	animation-delay: 0s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes smile{
+
+		23%{
+			border-radius: 50%;
+			transform: scale(1,1);
+		}
+		
+		25%{
+			border-radius: 50%;
+			transform: scale(1.3,1.3);
+		}
+		
+		40%{
+			border-radius: 50%;
+			transform: scale(1.3,1.3);
+		}
+		
+		42%{
+			border-radius: 50%;
+			transform: scale(1,1);
+		}
+		
+		44%{
+			border-radius: 50%;
+			transform: scale(1,1);
+		}
+		
+		45%{
+			 border-radius: 70% / 50% 50% 80% 80%;
+			 transform: scale(2,1.5);
+		}
+		
+		70%{
+			 border-radius: 70% / 50% 50% 80% 80%;
+			 transform: scale(2,1.5);
+		}
+		
+		
+		73%{
+			border-radius: 50%;
+			transform: scale(1,1);	
+		}
+		
+		97%{
+			transform: scale(1,1);	
+		}
+		}
+	
+
+
+
+.greeting{
+	
+	animation-name: message;
+	animation-duration: 5s;
+	animation-delay: 0s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	position: absolute;
+	transform-origin: center;
+
+}
+
+@-webkit-keyframes message{
+
+		0%{
+			opacity: 0%;
+		}
+		
+		44%{
+			opacity: 0%;
+		}
+		
+		45%{
+			opacity: 100%;
+		}
+		
+		70%{
+			opacity: 100%;
+		}
+		
+		73%{
+			opacity: 0%;
+		}
+		
+		100%{
+			opacity: 0%;
+		}
+}
+
+	
+	
+	
+	
 </style>
 </head>
+
+
 
 <body>
 
@@ -574,58 +776,109 @@ body{
 	<div class="spark-3"></div>
 </div>
 
+
+
 <div class="face02">
+	<div class="smile"></div>
+	<div class="closed-L"></div>
+	<div class="closed-R"></div>
 </div>
+
+
 
 <div class="face01">
 	<div class="bangs_L"></div>
 	<div class="bangs_R"></div>
 	<div class="sidebang_L"></div>
 	<div class="sidebang_R"></div>
-	<div class="eyebrow_L"></div>
-	<div class="eyebrow_R"></div>
 	
-	<div class="left-eye">
-		<div class="shine_L"></div>
-		<div class="eyelash_L"></div>
-		<div class="eye_L"></div>
+	<div class="eyebrows">
+		<div class="eyebrow_L"></div>
+		<div class="eyebrow_R"></div>
 	</div>
 	
-	<div class="right-eye">
-		<div class="shine_R"></div>
-		<div class="eyelash_R"></div>
-		<div class="eye_R"></div>
+	<div class="eyes">
+		<div class="left-eye">
+			<div class="shine_L"></div>
+			<div class="eye_L"></div>
+		</div>
+
+
+
+		<div class="right-eye">
+			<div class="shine_R"></div>
+			<div class="eye_R"></div>
+		</div>
+
+
+
+			<div class="eyelash_L"></div>
+			<div class="eyelash_R"></div>
 	</div>
+		
 		
 		
 	<div class="nose"></div>
+	
+	
 	<div class="cheek_L"></div>
 	<div class="cheek_R"></div>
 	
-	<div class="mouth-open">
-	<div class="tongue">
-		<div class="tongue-1"></div>
-		<div class="tongue-2"></div>
-		<div class="tongue-3"></div>
-		<div class="tongue-4"></div>
-		<div class="tongue-5"></div>
-	</div>
+	
+	
 	<div class="mouth">
 		<div class="mouth-1"></div>
 		<div class="mouth-2"></div>
 		<div class="mouth-3"></div>
 	</div>
-	</div>
+	
+	
 	
 	<div class="head"></div>
+	
 	<div class="ear_L"></div>
 	<div class="ear_R"></div>
+	
 	<div class="hair_1"></div>
 	<div class="hair_2"></div>
 	<div class="hair_3"></div>
 	<div class="hair_4"></div>
+	
 	<div class="back_L"></div>
 	<div class="back_R"></div>
+	
+</div>
+
+
+
+<div class="greeting">
+
+	<div class="hi">
+
+		<div class="h">
+			<div class="vert1"></div>
+			<div class="horiz1"></div>
+			<div class="vert2"></div>
+		</div>
+
+		<div class="i">
+			<div class="i-vert"></div>
+			<div class="i-dot"></div>
+		</div>
+
+		<div class="exclamation">
+			<div class="excl-vert"></div>
+			<div class="excl-dot"></div>
+		</div>
+		</div>
+		
+
+	<div class="speech">
+		<div class="bubble"></div>
+		<div class="triangle"></div>
+	</div>
+	
+
 	
 </div>
 
