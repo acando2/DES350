@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Poster Card</title>
+
+    <style>
+        body{
+            background-color: #fff;
+            margin: 
+
+        }
+
+        .card{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: 90vh;
+            background: url("shenandoah-poster.png")
+             no-repeat;
+            background-size: contain;
+        }
+
+        .card:hover {
+            background: url("shenandoah-poster.gif") no-repeat;
+            background-size: contain;
+        }
+
+        #preload {
+            background: url("shenandoah-poster.gif") no-repeat -9999px -9999px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card"></div>
+    <div class="preload"></div>
+
+</body>
+</html>
