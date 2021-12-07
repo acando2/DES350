@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<style>
+
+body{
+	font-family: "Fjalla One", san-serif;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+#sky{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -4;
+	width: 100vw;
+}
+ 
+ 
+.pink{
+	position: absolute;
+	top: 65vw;
+	left: 0; 
+  	z-index: -3;
+  	height: auto;
+  	width: 100vw;
+}
+
+
+.purple {
+	position: absolute; 
+  	top: 70vw; 
+  	left: 0; 
+  	z-index: -2;
+  	height: auto;
+  	width: 100vw;
+}
+
+
+.green {
+	position: absolute; 
+  	top: 70vw; 
+  	left: 0; 
+  	z-index: -1;
+  	height: auto;
+  	width: 100vw;
+}
+
+
+.bushes {
+	position: absolute; 
+  	top: -5vw; 
+  	left: 0; 
+  	z-index: 0;
+  	height: auto;
+  	width: 100vw;
+}
+
+
+#title {
+	font-family: "Fjalla One", san-serif;
+	text-align: center;
+	font-size: 11vw;
+	padding: 10% 10% 0% 10%;
+	color: #5F0018;
+}
+
+
+.coordinates {
+	position: absolute;
+	font-size: 3vw;
+	top: 85vw;
+	left: 10vw;
+	z-index: -4;
+	color: #5F0018;
+}
+
+
+.location {
+	position: absolute;
+	font-size: 3vw;
+	top: 115vw;
+	left: 57vw;
+	z-index: -3;
+	color: #5F0018;
+}
+
+
+.est {
+	position: absolute;
+	font-size: 3vw;
+	top: 145vw;
+	left: 10vw;
+	z-index: -2;
+	color: #5F0018;
+}
+
+.description {
+	position:inherit;
+	font-size: 1.5vw;
+	top: 43vw;
+	left: 57vw;
+	line-height: 2.5vw;
+	width: 35.7vw;
+	z-index: 0;
+	color: white;
+}
+
+
+#driving {
+	position: absolute;
+	z-index: 1;
+	width: 20vw;
+	top: 130vw;
+	left: 11.11vw;
+}
+
+
+.driving-label {
+	position: absolute;
+	font-size: 1.5vw;
+	z-index: 1;
+	top: 155vw;
+	left: 17.5vw;
+	color: #5F0018;;
+}
+
+
+#camping {
+	position: absolute;
+	z-index: 1;
+	width: 20vw;
+	top: 140vw;
+	left: 72.22vw;
+}
+
+
+.camping-label {
+	position: absolute;
+	font-size: 1.5vw;
+	z-index: 1;
+	top: 167vw;
+	left: 75vw;
+	color: #5F0018;;
+}
+
+
+#picnicking {
+	position: absolute;
+	z-index: 1;
+	width: 20vw;
+	top: 158vw;
+	left: 41.66vw;
+}
+
+
+.picnicking-label {
+	position: absolute;
+	font-size: 1.5vw;
+	z-index: 1;
+	top: 184.5vw;
+	left: 49vw;
+	color: #5F0018;;
+}
+
+
+#biking {
+	position: absolute;
+	z-index: 1;
+	width: 20vw;
+	top: 175vw;
+	left: 11.11vw;
+}
+
+
+.biking-label {
+	position: absolute;
+	font-size: 1.5vw;
+	z-index: 1;
+	top: 201.5vw;
+	left: 19vw;
+	color: #5F0018;;
+}
+
+
+
+#lodging {
+	position: absolute;
+	z-index: 1;
+	width: 20vw;
+	top: 175vw;
+	left: 72.22vw;
+}
+
+
+.lodging-label {
+	position: absolute;
+	font-size: 1.5vw;
+	z-index: 1;
+	top: 200vw;
+	left: 81.5vw;
+	color: #5F0018;;
+}
+
+
+#visit-button {
+	position: absolute;
+	z-index: 1;
+	width: 55.55vw;
+	height: 22.22vw;
+	top: 210vw;
+	left: 22.22vw;
+	right: auto;
+	background-color: #62365E;
+	line-height: 22.22vw;
+	text-align: center;
+	border-radius: 200px;
+	font-family: "Fjalla One", san-serif;
+	font-size: 7vw;
+	font-display: center;
+	color: white;
+}
+
+
+.moreparks {
+	position: absolute;
+	font-size: 3vw;
+	top: 241vw;
+	left: 11.11vw;
+	color: white;
+}
+
+
+.other-posters {
+	position: absolute;
+	left: 11.11vw;
+	right: 11.11vw;
+	top: 250vw;
+	width: 77.77vw;
+	
+}
+
+
+#yosemite {
+	float: left;
+	height: 2vw;
+}
+
+
+#arctic {
+	float: left;
+	padding-left: 15vw;
+	padding-right: 15vw;
+}
+
+
+#acadia {
+	display: inline-block;
+}
+
+
+#credit {
+	position: absolute;
+	font-size: 1.5vw;
+	top: 280vw;
+	left: 58vw;
+	color: white;
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="bg">
+	<img id="sky"
+	src="parksite-bg-03.png" 
+	alt=""/> 
+</div>
+
+
+
+<div class="hills">
+	<div class="pink rellax" data-rellax-speed="5">
+		<img id="pink"
+			src="parksite-pink-04.svg" 
+			alt="">
+	</div>
+
+
+
+	<div class="purple rellax" data-rellax-speed="4">
+
+		<div class="description rellax" data-rellax-speed="0">Shenandoah National Park is a land bursting with cascading waterfalls, spectacular vistas, fields of wildflowers, and quiet wooded hollows. With over 200,000 acres of protected lands that are haven to deer, songbirds, and black bear, there's so much to explore...and your journey begins right here!</div>
+
+		<img id="purple"
+			src="parksite-purple-04.svg" 
+			alt="">
+	</div>
+	
+	
+	
+	<div class="green rellax" data-rellax-speed="3">
+		<img id="green"
+			src="parksite-green-04.svg" 
+			alt=""> 
+	</div>
+
+</div>
+
+<div class="bushes rellax" data-rellax-speed="2">
+	<img id="bushes"
+	src="parksite-bushes-03.svg" 
+	alt="">
+</div>
+
+
+
+<div id="title">Shenandoah <br> National Park</div>
+
+
+<div class="coordinates rellax" data-rellax-speed="5.5">38°32’N<br>78°21’W</div>
+
+
+<div class="location rellax" data-rellax-speed="6.5">Virginia, USA</div>
+
+
+<div class="est rellax" data-rellax-speed="5">Est. Dec 26, 1935</div>
+
+
+
+<img id="driving" src="driving-07.png" alt=""/>
+
+<img id="camping" src="camping-08.png" alt=""/>
+
+<img id="picnicking" src="picnicking-06.png" alt=""/>
+
+<img id="biking" src="biking-09.png" alt=""/>
+
+<img id="lodging" src="lodging-10.png" alt=""/>
+
+
+<div class="activity-labels">
+
+	<div class="driving-label">Skyline Driving</div>
+	
+	<div class="camping-label">Backcountry Camping</div>
+	
+	<div class="picnicking-label">Picnicking</div>
+	
+	<div class="biking-label">Biking</div>
+	
+	<div class="lodging-label">Lodging</div>
+	
+</div>
+
+
+
+<a id="visit-button" href="https://www.goshenandoah.com/">Visit the Park!</a>
+
+
+
+<div class="moreparks">More Parks</div>
+
+
+<div class="other-posters">
+
+	<a id="yosemite" href="https://epined7.github.io/350/National%20Park%20Website.html"><img src="yosemite.gif" width="298.5653" alt=""/></a>
+
+	<a id="arctic" href="https://cpalacios48.github.io/DES350/Project4.html"><img src="gatesofthearctic.gif" width="298.5653" alt=""/></a>
+
+	<a id="acadia" href="https://djrobles.github.io/DES350/Final-Web.html"><img src="acadia.gif" width="298.5653" alt=""/></a>
+
+</div>
+
+
+<div id="credit">All information is taken from nps.gov and Wikipedia</div>
+
+
+
+<script type="text/javascript" src="rellax.js"></script>
+<script type="text/javascript" src="option.js"></script>
+  
+<script>
+    var rellax = new Rellax('.rellax', {
+      // center: true
+      callback: function (position) {
+        // callback every position change
+        console.log(position);
+	  	},
+      	breakpoints: [576, 768, 1024]
+    });
+  </script>
+  
+  
+  
+</body>
+</html>
